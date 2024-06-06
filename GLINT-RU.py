@@ -79,15 +79,6 @@ class MultiHeadAttention(nn.Module):
         return hidden_states
 
 class GLINTRU(SequentialRecommender):
-    r"""GRU4Rec is a model that incorporate RNN for recommendation.
-
-    Note:
-
-        Regarding the innovation of this article,we can only achieve the data augmentation mentioned
-        in the paper and directly output the embedding of the item,
-        in order that the generation method we used is common to other sequential models.
-    """
-
     def __init__(self, config, dataset):
         super(GLINTRU, self).__init__(config, dataset)
 
