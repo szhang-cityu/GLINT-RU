@@ -178,8 +178,8 @@ class GLINTRU(SequentialRecommender):
         gru_output = self.conv1dforgru(gru_output.transpose(1, 2))
         gru_output = gru_output.transpose(1, 2)
 
-        self.weights = F.softmax(self.weights, dim=0)
-        expert_output = self.weights[0] * gru_output + self.weights[1] * attention_output
+        weights = F.softmax(self.weights, dim=0)
+        expert_output = weights[0] * gru_output + weights[1] * attention_output
         h = expert_output * h2
         h = self.dense(h)
         h = self.dropmix(h)
@@ -188,7 +188,7 @@ class GLINTRU(SequentialRecommender):
 
         x1 = self.dense3(h)
         x2 = self.dense4(h)
-        x2 =self.gelu(x2)
+        x2 = self.gelu(x2)
         x = x1 * x2
         x = self.denseout(x)
         x = self.dropdense(x)
