@@ -8,7 +8,7 @@ If you run the code with the error mentioning `ldiffrec`, you can replace the `l
 
 Install recbole and other required packages:
 ```bash
-pip install recbole, ray, ray-tune, protobuf==3.20.0
+pip install recbole, ray, ray[tune], protobuf==3.20.0
 ```
 ## 🚀Configuration & Training
 Replace the configuration file like `ml-1m.yaml` in the `dataset` folder in the recbole package.
