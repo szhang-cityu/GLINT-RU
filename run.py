@@ -7,10 +7,10 @@ parameter_dict = {
    'train_neg_sample_args': None,   #
    'neg_sampling': None,
    'mask_ratio': 0.2,
-   'hidden_size': 64,
+   'hidden_size': 128,
    'inner_size': 128,
    'n_layers': 1,
-   'n_heads': 4,
+   'n_heads': 8,
    'hidden_dropout_prob': 0.2,
    'attn_dropout_prob': 0.2,
    'hidden_act': 'gelu',
@@ -22,6 +22,7 @@ parameter_dict = {
    'valid_metric': 'NDCG@10'
 }
 run_recbole(model='GLINT-RU', dataset='ml-1m', config_dict=parameter_dict)
+
 
 
 
