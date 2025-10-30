@@ -7,7 +7,7 @@ First you need to install `recbole` to conduct the experiments.There are some bu
 If you run the code with the error mentioning `ldiffrec`, you can replace the `ldiffrec.py` by our code as a placeholder in `general recommender` to solve it.
 - First step:
 ```bash
-pip install recbole, ray, ray-tune, protobuf==2.21.0
+pip install recbole, ray, ray-tune, protobuf==3.20.0
 ```
 ## 🚀Configuration & Training
 Replace the configuration file like `ml-1m.yaml` in the `dataset` folder in the recbole package.
