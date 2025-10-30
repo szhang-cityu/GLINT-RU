@@ -11,10 +11,14 @@ pip install recbole, ray, ray-tune, protobuf==2.21.0
 ```
 ## 🚀Configuration & Training
 Replace the configuration file like `ml-1m.yaml` in the `dataset` folder in the recbole package.
+
 You can change the configuration for your own experiments.
+
 Replace the `overall.yaml` in the recbole package.
+
 Note: The maximun sequence length should be changed according to different datasets.
-- Third step:
+
+Train GLINT-RU:
 ```bash
 python run.py
 ```
