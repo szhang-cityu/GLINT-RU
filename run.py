@@ -9,7 +9,7 @@ parameter_dict = {
    'mask_ratio': 0.2,
    'hidden_size': 64,
    'inner_size': 128,
-   'n_layers': 1, # does not matter
+   'n_layers': 1,
    'n_heads': 4,
    'hidden_dropout_prob': 0.2,
    'attn_dropout_prob': 0.2,
@@ -22,5 +22,6 @@ parameter_dict = {
    'valid_metric': 'NDCG@10'
 }
 run_recbole(model='GLINT-RU', dataset='ml-1m', config_dict=parameter_dict)
+
 
 
